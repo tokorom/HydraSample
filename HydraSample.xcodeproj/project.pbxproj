@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		F303DD0322324BD800FB234A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F303DD0122324BD800FB234A /* Main.storyboard */; };
 		F303DD0522324BD900FB234A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F303DD0422324BD900FB234A /* Assets.xcassets */; };
 		F303DD0822324BD900FB234A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F303DD0622324BD900FB234A /* LaunchScreen.storyboard */; };
+		F303DD1122324F3300FB234A /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F303DD1022324F3300FB234A /* Hydra.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F303DD0422324BD900FB234A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F303DD0722324BD900FB234A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F303DD0922324BD900FB234A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F303DD1022324F3300FB234A /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F303DD1122324F3300FB234A /* Hydra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				F303DCFC22324BD800FB234A /* HydraSample */,
 				F303DCFB22324BD800FB234A /* Products */,
+				F303DD0F22324F3300FB234A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +68,14 @@
 			path = HydraSample;
 			sourceTree = "<group>";
 		};
+		F303DD0F22324F3300FB234A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F303DD1022324F3300FB234A /* Hydra.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +86,7 @@
 				F303DCF622324BD700FB234A /* Sources */,
 				F303DCF722324BD700FB234A /* Frameworks */,
 				F303DCF822324BD700FB234A /* Resources */,
+				F303DD132232593900FB234A /* Copy frameworks for Carthage */,
 			);
 			buildRules = (
 			);
@@ -129,6 +142,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F303DD132232593900FB234A /* Copy frameworks for Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/Carthage/input.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "Copy frameworks for Carthage";
+			outputFileListPaths = (
+				"$(SRCROOT)/Carthage/output.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F303DCF622324BD700FB234A /* Sources */ = {
@@ -284,7 +320,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AXCX2DUCQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HydraSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +343,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AXCX2DUCQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HydraSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
