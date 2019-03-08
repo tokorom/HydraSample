@@ -13,6 +13,7 @@
 		F303DD0522324BD900FB234A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F303DD0422324BD900FB234A /* Assets.xcassets */; };
 		F303DD0822324BD900FB234A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F303DD0622324BD900FB234A /* LaunchScreen.storyboard */; };
 		F303DD1122324F3300FB234A /* Hydra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F303DD1022324F3300FB234A /* Hydra.framework */; };
+		F303DD16223267C500FB234A /* AsyncAwaitWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F303DD15223267C500FB234A /* AsyncAwaitWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F303DD0722324BD900FB234A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F303DD0922324BD900FB234A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F303DD1022324F3300FB234A /* Hydra.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Hydra.framework; path = Carthage/Build/iOS/Hydra.framework; sourceTree = "<group>"; };
+		F303DD15223267C500FB234A /* AsyncAwaitWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncAwaitWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		F303DCFC22324BD800FB234A /* HydraSample */ = {
 			isa = PBXGroup;
 			children = (
+				F303DD14223267C500FB234A /* AsyncAwaitWrapper */,
 				F303DCFD22324BD800FB234A /* AppDelegate.swift */,
 				F303DCFF22324BD800FB234A /* ViewController.swift */,
 				F303DD0122324BD800FB234A /* Main.storyboard */,
@@ -75,6 +78,14 @@
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
+		};
+		F303DD14223267C500FB234A /* AsyncAwaitWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				F303DD15223267C500FB234A /* AsyncAwaitWrapper.swift */,
+			);
+			path = AsyncAwaitWrapper;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -171,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F303DD16223267C500FB234A /* AsyncAwaitWrapper.swift in Sources */,
 				F303DD0022324BD800FB234A /* ViewController.swift in Sources */,
 				F303DCFE22324BD800FB234A /* AppDelegate.swift in Sources */,
 			);
